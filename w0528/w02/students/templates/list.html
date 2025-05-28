@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2{text-align:center;}
+    table,th,td{border:1px solid black; border-collapse:collapse;}
+    table{width:900px; margin:20px auto;}
+    th,td{height:40px; text-align:center;}
+    div{width:400px; margin:0 auto;}
+    button{width:200px; height:50px; font-size:15px;}
+    div{text-align:center}
+</style>
+<body>
+    <h2>리스트페이지</h2>
+    <table>
+        <tr>
+            <th>번호</th>
+            <th>이름</th>
+            <th>학과</th>
+        </tr>
+        {% for s in list %}
+        <tr>
+            <th>{{forloop.counter}}</th>
+            <th>{{s.name}}</th>
+            <th>{{s.major}}</th>
+        {% endfor %}
+
+            
+        </tr>
+    </table>
+    <br>
+    <div>
+
+        <a href='/'><button>홈으로</button></a>
+        <a href='/students/write'><button>학생등록페이지로</button></a>
+    </div>
+    
+</body>
+</html>
