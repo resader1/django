@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h2{text-align:center;}
+        table,th,td{border:1px solid black; border-collapse:collapse,text-align:center;}
+        th{height:35px;}
+        td{height:30px}
+        table{width:1000px; margin:10px auto}
+    </style>
+</head>
+<body>
+    <h2>학생성적리스트</h2>
+    <table>
+        <tr>
+            <th>{{s.no}}</th>
+            <th>{{s.name}}</th>
+            <th>{{s.kor}}</th>
+            <th>{{s.eng}}</th>
+            <th>{{s.math}}</th>
+            <th>{{s.total}}</th>
+            <th>{{s.avg}}</th>
+        </tr>
+        {% for s in list %}
+        <p>{{s}}</p>
+        <tr>
+            <td>1</td>
+            <td>홍길동</td>
+            <td>100</td>
+            <td>100</td>
+            <td>100</td>
+            <td>300</td>
+            <td>100.0</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>데이터 없음</p>
+    {% endif %}
+    
+</body>
+</html>
