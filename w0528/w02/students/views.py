@@ -4,7 +4,10 @@ from students.models import Student
 # Create your views here.
 
 def write(request):
-    return render(request,'write.html')
+    # if request.method == 'get':
+        return render(request,'write.html')
+    
+        
 
 
 def view(request):

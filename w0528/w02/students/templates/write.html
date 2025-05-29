@@ -7,6 +7,24 @@
 </head>
 <body>
     <h2>작성페이지</h2>
+    <form action='/students/write/' method='post' name='frm'>
+        {% csrf_token %}
+        <label>이름</label>
+        <input type='text' name='name'><br>
+        <label>전공</label>
+        <input type='text' name='major'><br>
+        <label>학년</label>
+        <input type='text' name='grade'><br>
+        <label>나이</label>
+        <input type='text' name='age'><br>
+        <label>성별</label>
+        <input type='radio' name='gender' value='남자' id='man'>
+        <label for='man'>남자</label>
+        <input type='radio' name='gender' value='여자' id='woman'>
+        <label for='woman'>여자</label>
+        <br>
+        <input type='submit' value='저장'>
+    </form>
     
 </body>
 </html>
