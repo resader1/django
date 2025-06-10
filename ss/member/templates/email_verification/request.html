@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이메일 인증</title>
+</head>
+<body>
+    <h1>이메일 인증</h1>
+    <p>회원가입 전에 이메일 인증을 진행해주세요.</p>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">인증 이메일 보내기</button>
+    </form>
+</body>
+</html>
